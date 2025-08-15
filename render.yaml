@@ -1,0 +1,11 @@
+
+services:
+  - type: web
+    name: shelfsnap-api
+    runtime: docker
+    plan: starter
+    region: oregon
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
