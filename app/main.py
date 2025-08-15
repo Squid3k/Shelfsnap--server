@@ -95,3 +95,6 @@ async def complete_scan(scan_id: str = Form(...), background_tasks: BackgroundTa
 @app.get("/healthz")
 def health():
     return {"status": "ok", "ffmpeg": ffmpeg_available()}
+@app.get("/")
+def home():
+    return {"message": "ShelfSnap API is live!"}
